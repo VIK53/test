@@ -1,0 +1,21 @@
+$canvas-max-width: 850px; /*ширина main блока контента вместе с паддингом*/
+$content-max-width: 500px;/*ширина контента без паддинга*/
+$art-font: Arial; /*Шрифт статей, основной шрифт*/
+$art-font-size: 1.1rem; /*Основной размер шрифта*/
+$art-line-height: ($art-font-size * 1.3);
+
+$header-bg: #2e5a99; /*Фон меню */
+$body-bg: #aaa; /*фон левого и правого отступов холста*/
+$art-bg: #fff; /*фон холста статей*/
+
+:root {
+	--art-line-height: #{$art-line-height};
+  --top-bg: hsl(220, 90%, 56%);
+  --top-color: #fff;
+  --art-bg: #fff;
+  --art-color: #444;
+	--body-bg: #aaa;
+}
+
+*{box-sizing: border-box}
+html{font: $art-font-size $art-font}

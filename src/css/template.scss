@@ -1,0 +1,27 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+	background-color: var(--body-bg);
+	overflow-y:scroll;
+}
+
+header, footer, main {
+	width:100%;
+	max-width:$canvas-max-width;
+	margin:auto;
+	padding:16px 40px;
+}
+
+header, footer{
+	background-color: var(--top-bg);
+	color: var(--top-color);
+}
+
+main {
+  flex-grow: 1;
+	background-color: var(--art-bg);
+	padding-top:2rem;
+}
+
