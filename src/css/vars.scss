@@ -10,12 +10,115 @@ $art-bg: #fff; /*фон холста статей*/
 
 :root {
 	--art-line-height: #{$art-line-height};
-  --top-bg: hsl(220, 90%, 56%);
-  --top-color: #fff;
-  --art-bg: #fff;
-  --art-color: #444;
-	--body-bg: #aaa;
+
+	/* font rendering*/
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: $art-font-size $art-font
 }
 
 *{box-sizing: border-box}
-html{font: $art-font-size $art-font}
+
+body {
+  /* main*/
+	--hue: 215;
+	--color-primary-darker: hsl(var(--hue), 36%, 30%);
+	--color-primary-dark: 	hsl(var(--hue), 36%, 38%);
+	--color-primary: 				hsl(var(--hue), 36%, 46%);
+	--color-primary-light: 	hsl(var(--hue), 36%, 54%);
+	--color-primary-lighter:hsl(var(--hue), 36%, 84%);
+
+	--color-accent-darker: 	hsl( 342, 89%, 38%);
+	--color-accent-dark: 		hsl( 342, 89%, 43%);
+	--color-accent: 				hsl( 342, 89%, 48%);
+	--color-accent-light: 	hsl( 342, 89%, 56%);
+	--color-accent-lighter:	hsl( 342, 89%, 62%);
+
+	--color-black: hsl( 204, 28%, 7%);
+	--color-white: hsl( 0, 0%, 100%);
+
+  /* feedback*/
+	--color-warning-darker: hsl( 46, 100%, 47%);
+	--color-warning-dark: 	hsl( 46, 100%, 50%);
+	--color-warning: 				hsl( 46, 100%, 61%);
+	--color-warning-light: 	hsl( 46, 100%, 71%);
+	--color-warning-lighter:hsl( 46, 100%, 80%);
+
+	--color-success-darker: hsl( 122, 50%, 47%);
+	--color-success-dark: 	hsl( 122, 50%, 52%);
+	--color-success: 				hsl( 122, 50%, 60%);
+	--color-success-light: 	hsl( 122, 50%, 69%);
+	--color-success-lighter:hsl( 122, 50%, 76%);
+
+	--color-error-darker: hsl( 342, 89%, 38%);
+	--color-error-dark: 	hsl( 342, 89%, 43%);
+	--color-error: 				hsl( 342, 89%, 48%);
+	--color-error-light: 	hsl( 342, 89%, 56%);
+	--color-error-lighter:hsl( 342, 89%, 62%);
+
+  /* background*/
+	--color-bg-darker: 	hsl(var(--hue), 26%, 89%);
+	--color-bg-dark: 		hsl(var(--hue), 36%, 97%);
+	--color-bg:			 		hsl(var(--hue), 0%, 100%);
+	--color-bg-light:		hsl(var(--hue), 3%, 100%);
+	--color-bg-lighter: hsl(var(--hue), 4%, 100%);
+
+  /* color contrasts*/
+	--color-contrast-lower: hsl(var(--hue), 17%, 84%);
+	--color-contrast-low: 	hsl(var(--hue), 2%, 60%);
+	--color-contrast: 			hsl(var(--hue), 2%, 46%);
+	--color-contrast-high: 	hsl(var(--hue), 7%, 27%);
+	--color-contrast-higher:hsl(var(--hue), 28%, 7%);
+	--theme-name:	"Темная тема";
+}
+
+body.dark {
+  /* main*/
+	--color-primary-darker: hsl(var(--hue), 93%, 57%);
+	--color-primary-dark: hsl(var(--hue), 93%, 61%);
+	--color-primary: hsl(var(--hue), 93%, 65%);
+	--color-primary-light: hsl(var(--hue), 93%, 69%);
+	--color-primary-lighter: hsl(var(--hue), 93%, 72%);
+
+	--color-accent-darker: hsl( 342, 92%, 41%);
+	--color-accent-dark: hsl( 342, 92%, 47%);
+	--color-accent: hsl( 342, 92%, 54%);
+	--color-accent-light: hsl( 342, 92%, 60%);
+	--color-accent-lighter: hsl( 342, 92%, 65%);
+
+	--color-black: hsl( 204, 28%, 7%);
+	--color-white: hsl( 0, 0%, 100%);
+
+  /* feedback*/
+	--color-warning-darker: hsl( 46, 100%, 47%);
+	--color-warning-dark: hsl( 46, 100%, 50%);
+	--color-warning: hsl( 46, 100%, 61%);
+	--color-warning-light: hsl( 46, 100%, 71%);
+	--color-warning-lighter: hsl( 46, 100%, 80%);
+
+	--color-success-darker: hsl( 122, 50%, 47%);
+	--color-success-dark: hsl( 122, 50%, 52%);
+	--color-success: hsl( 122, 50%, 60%);
+	--color-success-light: hsl( 122, 50%, 69%);
+	--color-success-lighter: hsl( 122, 50%, 76%);
+
+	--color-error-darker: hsl( 342, 92%, 41%);
+	--color-error-dark: hsl( 342, 92%, 47%);
+	--color-error: hsl( 342, 92%, 54%);
+	--color-error-light: hsl( 342, 92%, 60%);
+	--color-error-lighter: hsl( 342, 92%, 65%);
+
+  /* background*/
+	--color-bg-darker: hsl( 204, 15%, 6%);
+	--color-bg-dark: hsl( 203, 18%, 9%);
+	--color-bg: hsl( 203, 24%, 13%);
+	--color-bg-light: hsl( 203, 18%, 17%);
+	--color-bg-lighter: hsl( 204, 15%, 20%);
+
+  /* color contrasts*/
+	--color-contrast-lower: hsl( 208, 12%, 24%);
+	--color-contrast-low: hsl( 208, 6%, 40%);
+	--color-contrast: hsl( 213, 5%, 56%);
+	--color-contrast-high: hsl( 223, 8%, 82%);
+	--color-contrast-higher: hsl( 240, 100%, 99%);
+}

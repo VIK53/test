@@ -14,7 +14,7 @@ require __DIR__.'/inc/DB.php';
 		<?require __DIR__.'/inc/main.php'?>
 	</main>
 	<footer>
-  	<div>Тестовое задание для ООО Гауф Рус.</div>
+  	<div>Тестовое задание для ООО Гауф Рус. <a target="_blank" href="https://github.com/VIK53/test">Github</a> </div>
 	</footer>
 	<script src="bundle.js?v=<?=$config['ver']?>"></script>
 </body>

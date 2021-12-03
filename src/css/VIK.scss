@@ -1,21 +1,32 @@
 header {position:relative}
 header h1 {
 	margin:0;font-size:35px;
-	position:relative;top:-2px
+	position:relative;top:-2px;
+	font: 37px Arial, Tahoma;
 }
 footer div {position:relative;top:3px}
+footer a {color: var(--top-color);float:right}
+footer a:hover {color:yellow;}
 
 .VIK {max-width:$content-max-width;}
-.VIK .cap {color:#777;}
+.VIK .cap {color: var(--color-contrast-low);}
 .VIK input {
 	font: $art-font-size $art-font;
 	width:100%;
 	display:block;
 	margin-bottom:1.2rem;
 	padding:0.4rem;
-	color: var(--art-color);
+	color: var(--color-contrast-high);
+  background-color: var(--color-bg-dark);
+	border: 1px solid var(--color-bg-darker);
+	outline: 1px solid var(--color-contrast-lower);
 }
-.VIK >p{font: 0.85rem Tahoma; color:#65656f;}
+.VIK input:focus {
+	border: 1px solid var(--color-primary);
+	outline: 1px solid var(--color-primary);
+  background-color: var(--color-bg);
+}
+.VIK >p{font: 0.85rem Tahoma; color: var(--color-contrast-low);}
 
 /*Убираю фон после автоподстановки. https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete*/
 input:-webkit-autofill,
@@ -41,23 +52,15 @@ input:-webkit-autofill:active{
 .VIK_user_doc span{cursor:pointer}
 .VIK_user_doc span:hover{color:#ff7;}
 
-.VIK_user_doc {border-collapse:collapse;width:100%}
-.VIK_user_doc td {vertical-align:middle; border: 1px solid #aaa}
-.VIK_user_doc td:last-child {
-	text-align:center;
-	color:red;
-	cursor:pointer;
-	padding:0
-}
-
 .VIK .upload div {
 	cursor:pointer;
-	color:#444;
-	background-color: #eee;
+	color: var(--color-contrast-higher);
+	background-color: var(--color-primary-lighter);
 	padding:0.4rem;
 	text-align:center;
-	border:1px solid #888;
 	margin:2rem 0;
+	border: 1px solid var(--color-contrast-low);
+	outline: 1px solid var(--color-contrast-low);
 }
 .VIK .upload div:hover {
 	border:1px solid #222;
